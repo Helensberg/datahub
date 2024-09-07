@@ -25,7 +25,7 @@ node {
   if (project.hasProperty('nodeDistBaseUrl')) {
     distBaseUrl = project.getProperty('nodeDistBaseUrl')
   } else {
-    distBaseUrl = 'https://nodejs.org/dist'
+    distBaseUrl = 'https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/'
   }
 
   // Set the work directory for unpacking node
@@ -43,7 +43,9 @@ node {
   Wrappers around Yarn Tasks.
  */
 task yarnInstall(type: YarnTask) {
-  args = ['install']
+//  args = ['install']
+  args = ['install', '--registry', 'https://registry.npm.taobao.org']
+
 
   // The node_modules directory can contain built artifacts, so
   // it's not really safe to cache it.
