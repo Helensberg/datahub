@@ -1,5 +1,6 @@
 # Defining custom repo urls for use in enterprise environments. Re-used between stages below.
-ARG ALPINE_REPO_URL=http://dl-cdn.alpinelinux.org/alpine
+#ARG ALPINE_REPO_URL=http://dl-cdn.alpinelinux.org/alpine
+ARG ALPINE_REPO_URL=https://mirrors.tencent.com/alpine
 
 FROM golang:1-alpine3.20 AS binary
 

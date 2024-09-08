@@ -6,6 +6,8 @@ import urllib.request
 import shutil
 
 repo_url = "https://api.github.com/repos/datahub-project/static-assets"
+# repo_url = "https://github.com.cnpmjs.org/datahub-project/static-assets"
+# repo_url = "https://hub.fastgit.org/datahub-project/static-assets"
 
 
 def download_file(url, destination):
@@ -98,6 +100,6 @@ def main():
         file_format=".json",
     )
 
-
+# cjy: download it manually
 if __name__ == "__main__":
-    main()
+    exit(0)

@@ -1,5 +1,6 @@
 # Defining custom repo urls for use in enterprise environments. Re-used between stages below.
-ARG ALPINE_REPO_URL=http://dl-cdn.alpinelinux.org/alpine
+#ARG ALPINE_REPO_URL=http://dl-cdn.alpinelinux.org/alpine
+ARG ALPINE_REPO_URL=https://mirrors.tencent.com/alpine
 
 FROM golang:1-alpine3.20 AS binary
 
@@ -14,6 +15,7 @@ RUN if [ "${ALPINE_REPO_URL}" != "http://dl-cdn.alpinelinux.org/alpine" ] ; then
 RUN apk --no-cache --update add openssl git tar curl
 
 WORKDIR /go/src/github.com/jwilder/dockerize
+
 
 RUN go install github.com/jwilder/dockerize@$DOCKERIZE_VERSION
 
