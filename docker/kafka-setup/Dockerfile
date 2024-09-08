@@ -1,10 +1,11 @@
 ARG KAFKA_DOCKER_VERSION=7.4.6
 
 # Defining custom repo urls for use in enterprise environments. Re-used between stages below.
-ARG ALPINE_REPO_URL=http://dl-cdn.alpinelinux.org/alpine
+#ARG ALPINE_REPO_URL=http://dl-cdn.alpinelinux.org/alpine
+ARG ALPINE_REPO_URL=https://mirrors.tencent.com/alpine
 ARG GITHUB_REPO_URL=https://github.com
 ARG MAVEN_CENTRAL_REPO_URL=https://repo1.maven.org/maven2
-ARG APACHE_DOWNLOAD_URL=null
+ARG APACHE_DOWNLOAD_URL=https://mirrors.cloud.tencent.com/apache/
 
 # Using AS a base image because to get the needed jars for confluent utils
 FROM confluentinc/cp-base-new:$KAFKA_DOCKER_VERSION AS confluent_base
