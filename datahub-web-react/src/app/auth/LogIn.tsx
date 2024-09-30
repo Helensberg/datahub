@@ -23,16 +23,16 @@ const FormInput = styled(Input)`
         border: 1px solid #555555;
         border-radius: 5px;
         background-color: transparent;
-        color: white;
+        color: balck;
         line-height: 1.5715;
     }
     > .ant-input {
-        color: white;
+        color: black;
         font-size: 14px;
         background-color: transparent;
     }
     > .ant-input:hover {
-        color: white;
+        color: black;
         font-size: 14px;
         background-color: transparent;
     }
@@ -114,7 +114,7 @@ export const LogIn: React.VFC<LogInProps> = () => {
             )}
             <div className={styles.login_box}>
                 <div className={styles.login_logo_box}>
-                    <Image wrapperClassName={styles.logo_image} src={themeConfig.assets?.logoUrl} preview={false} />
+                    <Image wrapperClassName={styles.logo_image} src="/assets/logos/njulogo.png" preview={false} />
                 </div>
                 <div className={styles.login_form_box}>
                     {loading && <Message type="loading" content="Logging in..." />}
@@ -122,14 +122,14 @@ export const LogIn: React.VFC<LogInProps> = () => {
                         <Form.Item
                             name="username"
                             // eslint-disable-next-line jsx-a11y/label-has-associated-control
-                            label={<label style={{ color: 'white' }}>Username</label>}
+                            label={<label style={{ color: 'black' }}>Username</label>}
                         >
                             <FormInput prefix={<UserOutlined />} data-testid="username" />
                         </Form.Item>
                         <Form.Item
                             name="password"
                             // eslint-disable-next-line jsx-a11y/label-has-associated-control
-                            label={<label style={{ color: 'white' }}>Password</label>}
+                            label={<label style={{ color: 'black' }}>Password</label>}
                         >
                             <FormInput prefix={<LockOutlined />} type="password" data-testid="password" />
                         </Form.Item>
