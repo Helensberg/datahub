@@ -198,7 +198,7 @@ export const SearchBar = ({
             type: '',
             label: (
                 <Button type="link" onClick={onClickExploreAll}>
-                    Explore all →
+                    探索所有 →
                 </Button>
             ),
             style: { marginLeft: 'auto', cursor: 'auto' },

@@ -93,7 +93,7 @@ export const ManageAccount = ({ urn: _urn, pictureLink: _pictureLink, name }: Pr
                         rel="noopener noreferrer"
                         tabIndex={0}
                     >
-                        Your Profile
+                        你的文件
                     </a>
                 </MenuItemStyle>
             ),
@@ -121,7 +121,7 @@ export const ManageAccount = ({ urn: _urn, pictureLink: _pictureLink, name }: Pr
             label: (
                 <MenuItemStyle danger key="logout" tabIndex={0}>
                     <a href="/logOut" onClick={handleLogout} data-testid="log-out-menu-item">
-                        Sign Out
+                        退出
                     </a>
                 </MenuItemStyle>
             ),

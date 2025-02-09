@@ -130,26 +130,26 @@ function LastIngested({ lastIngested }: Props) {
                     <PopoverContentWrapper>
                         <Title>
                             <StyledDot color={lastIngestedColor} />
-                            Last Synchronized
+                            上次同步
                         </Title>
                         <RelativeDescription>
-                            This {displayedEntityType.toLocaleLowerCase()} was last synchronized&nbsp;
+                            此{displayedEntityType.toLocaleLowerCase()} 为上次同步的&nbsp;
                             <b>{toRelativeTimeString(lastIngested)}</b>
                         </RelativeDescription>
-                        <SubText>Synchronized on {toLocalDateTimeString(lastIngested)}</SubText>
+                        <SubText>同步为{toLocalDateTimeString(lastIngested)}</SubText>
                     </PopoverContentWrapper>
                 }
             >
                 <MainContent>
                     <StyledDot color={lastIngestedColor} />
-                    Last synchronized&nbsp;
+                    上次同步&nbsp;
                     <b>{toRelativeTimeString(lastIngested)}</b>
                 </MainContent>
             </Popover>
             <Popover
                 title={
                     <HelpHeader>
-                        This represents the time that the entity was last synchronized with&nbsp;
+                        这代表该实体上次与&nbsp;同步的时间
                         {platformName ? (
                             <strong>
                                 {platformLogoUrl && (
@@ -161,7 +161,7 @@ function LastIngested({ lastIngested }: Props) {
                                 {platformName}
                             </strong>
                         ) : (
-                            <>the source platform</>
+                            <>数据源平台</>
                         )}
                     </HelpHeader>
                 }

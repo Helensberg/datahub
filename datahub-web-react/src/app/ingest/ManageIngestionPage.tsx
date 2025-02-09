@@ -42,8 +42,8 @@ const Tab = styled(Tabs.TabPane)`
 const ListContainer = styled.div``;
 
 enum TabType {
-    Sources = 'Sources',
-    Secrets = 'Secrets',
+    Sources = '数据源',
+    Secrets = '机密信息',
 }
 
 export const ManageIngestionPage = () => {
@@ -72,9 +72,9 @@ export const ManageIngestionPage = () => {
         <PageContainer>
             <OnboardingTour stepIds={[INGESTION_CREATE_SOURCE_ID, INGESTION_REFRESH_SOURCES_ID]} />
             <PageHeaderContainer>
-                <PageTitle level={3}>Manage Data Sources</PageTitle>
+                <PageTitle level={3}>管理数据源</PageTitle>
                 <Typography.Paragraph type="secondary">
-                    Configure and schedule syncs to import data from your data sources
+                    配置和安排同步以从数据源导入数据
                 </Typography.Paragraph>
             </PageHeaderContainer>
             <StyledTabs activeKey={selectedTab} size="large" onTabClick={(tab: string) => onClickTab(tab)}>

@@ -13,11 +13,11 @@ export const BusinessGlossaryOnboardingConfig: OnboardingStep[] = [
         content: (
             <Typography.Paragraph>
                 <p>
-                    Welcome to the <strong>Business Glossary</strong>!
+                    欢迎来到<strong>Business Glossary</strong>!
                 </p>
                 <p>
-                    The Glossary is a collection of structured, standarized labels you can use to categorize data
-                    assets. You can view and create both <strong>Terms</strong> and <strong>Term Groups</strong> here.
+                    Glossary是一系列结构化和标准化的标签的集合，你可以用此来对数据资产进行分类。
+                    你可以查看或创建<strong>Terms</strong> 和 <strong>Term Groups</strong>。
                 </p>
             </Typography.Paragraph>
         ),
@@ -29,10 +29,10 @@ export const BusinessGlossaryOnboardingConfig: OnboardingStep[] = [
         content: (
             <Typography.Paragraph>
                 <p>
-                    Click here to create a new <strong>Term</strong> .
+                    点击这里去创建新的 <strong>Term</strong> .
                 </p>
                 <p>
-                    <strong>Terms</strong> are words or phrases with a specific business definition assigned to them.
+                    <strong>Terms</strong> 是被赋予了特定定义的单词或短语。
                 </p>
             </Typography.Paragraph>
         ),
@@ -44,25 +44,14 @@ export const BusinessGlossaryOnboardingConfig: OnboardingStep[] = [
         content: (
             <Typography.Paragraph>
                 <p>
-                    Click here to create a new <strong>Term Group</strong>.
+                    点击这里去创建新的 <strong>Term Group</strong>.
                 </p>
                 <p>
-                    <strong>Term Groups</strong> act as folders, containing Terms and nested Term Groups.
+                    <strong>Term Groups</strong> 充当文件夹的角色，包括Terms和Term Groups.
                 </p>
                 <p>
-                    For example, there could be a <strong>PII Term Group</strong> containing Terms for different types
-                    of PII, such as <strong>Email</strong> or <strong>Phone Number</strong>.
-                </p>
-                <p>
-                    Learn more about the <strong>Business Glossary</strong>{' '}
-                    <a
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        href="https://datahubproject.io/docs/glossary/business-glossary"
-                    >
-                        {' '}
-                        here.
-                    </a>
+                    例如，可能有一个 <strong>PII Term Group</strong> 包含不同类型的 PII Terms，
+                    比方说 <strong>Email</strong> 或者 <strong>电话号码</strong>.
                 </p>
             </Typography.Paragraph>
         ),

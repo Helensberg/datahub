@@ -101,7 +101,7 @@ export const Features = () => {
                     <div>
                         <Title level={2}>Features</Title>
                         <Typography.Paragraph type="secondary">
-                            Explore and configure specific features
+                            探索并配置特定的功能。
                         </Typography.Paragraph>
                     </div>
                 </Container>

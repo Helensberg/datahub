@@ -14,23 +14,19 @@ function EmptyDomainDescription() {
     return (
         <>
             <StyledParagraph type="secondary">
-                <strong style={{ color: ANTD_GRAY[8] }}>Welcome to your Data Domains!</strong> It looks like this space
-                is ready to be transformed into a well-organized data universe. Start by creating your first domain - a
-                high-level category for your data assets.
+                <strong style={{ color: ANTD_GRAY[8] }}> 欢迎来到你的数据Domains!</strong> 看起来这个空间已经准备好被打造成
+                一个条理清晰的数据世界了。 首先创建你的一个Domain通过——为您的数据资产设立一个高级别的分类。
             </StyledParagraph>
             <StyledParagraph type="secondary">
-                <strong style={{ color: ANTD_GRAY[8] }}> Create Nested Domains:</strong> Want to dive deeper? You can
-                also create nested domains to add granularity and structure. Just like nesting Russian dolls, its all
-                about refining your organization.
+                <strong style={{ color: ANTD_GRAY[8] }}> 创建嵌套Domains</strong> ：想要挖掘到更深的层次? 你也可以创建嵌套Domains
+                去增加精细度和结构就像嵌套俄罗斯套娃一样，这一切都是为了完善您的组织架构。 
             </StyledParagraph>
             <StyledParagraph type="secondary">
-                <strong style={{ color: ANTD_GRAY[8] }}>Build Data Products</strong>: Once your domains are set, go a
-                step further! Organize your data assets into data products to realize a data mesh architecture. Data
-                products empower you to treat data as a product, making it more accessible and manageable.
+                <strong style={{ color: ANTD_GRAY[8] }}>建立你的数据产品</strong>: 一旦设定好Domains，再深入一步！ 
+                组织你的数据资产为数据产品以实现数据网络架构。数据产品使得你可以将数据按照产品的方式处置，使其更易管理和获取。
             </StyledParagraph>
             <StyledParagraph type="secondary">
-                Ready to embark on this data adventure? Click the Create Domain button to begin shaping your data
-                landscape!
+                准备好开启这场数据冒险之旅了吗? 点击创建Domain按钮去塑造你的数据版图吧！
             </StyledParagraph>
         </>
     );

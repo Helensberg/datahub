@@ -33,10 +33,10 @@ const StepsContainer = styled.div`
  * Mapping from the step type to the title for the step
  */
 export enum IngestionSourceBuilderStepTitles {
-    SELECT_TEMPLATE = 'Choose Data Source',
-    DEFINE_RECIPE = 'Configure Connection',
-    CREATE_SCHEDULE = 'Sync Schedule',
-    NAME_SOURCE = 'Finish up',
+    SELECT_TEMPLATE = '选择数据源',
+    DEFINE_RECIPE = '配置连接',
+    CREATE_SCHEDULE = '同步计划',
+    NAME_SOURCE = '完成',
 }
 
 /**
@@ -70,7 +70,7 @@ type Props = {
 
 export const IngestionSourceBuilderModal = ({ initialState, open, onSubmit, onCancel }: Props) => {
     const isEditing = initialState !== undefined;
-    const titleText = isEditing ? 'Edit Data Source' : 'Connect Data Source';
+    const titleText = isEditing ? 'Edit Data Source' : '连接数据源';
     const initialStep = isEditing
         ? IngestionSourceBuilderStep.DEFINE_RECIPE
         : IngestionSourceBuilderStep.SELECT_TEMPLATE;

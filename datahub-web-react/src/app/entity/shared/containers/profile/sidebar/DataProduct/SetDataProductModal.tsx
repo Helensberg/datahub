@@ -68,7 +68,7 @@ export default function SetDataProductModal({
             variables: { input: { resourceUrns: urns, dataProductUrn: selectedDataProduct.urn } },
         })
             .then(() => {
-                message.success({ content: 'Updated Data Product!', duration: 3 });
+                message.success({ content: '更新数据产品!', duration: 3 });
                 setDataProduct?.(selectedDataProduct);
                 onModalClose();
                 setSelectedDataProduct(null);
@@ -81,7 +81,7 @@ export default function SetDataProductModal({
                 message.destroy();
                 message.error(
                     handleBatchError(urns, e, {
-                        content: `Failed to add assets to Data Product: \n ${e.message || ''}`,
+                        content: `未能将资产添加到数据产品: \n ${e.message || ''}`,
                         duration: 3,
                     }),
                 );
@@ -114,7 +114,7 @@ export default function SetDataProductModal({
 
     return (
         <Modal
-            title={titleOverride || 'Set Data Product'}
+            title={titleOverride || '设定数据产品'}
             open
             onCancel={onModalClose}
             footer={
@@ -136,7 +136,7 @@ export default function SetDataProductModal({
                 showSearch
                 mode="multiple"
                 defaultActiveFirstOption={false}
-                placeholder="Search for Data Products..."
+                placeholder="搜索数据产品..."
                 onSelect={(urn: string) => onSelectDataProduct(urn)}
                 onDeselect={onDeselect}
                 onSearch={(value: string) => setQuery(value.trim())}

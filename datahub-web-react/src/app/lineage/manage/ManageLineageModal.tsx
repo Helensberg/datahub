@@ -123,10 +123,10 @@ export default function ManageLineageModal({
             footer={
                 <ModalFooter>
                     <Button onClick={closeModal} type="text">
-                        Cancel
+                        取消
                     </Button>
                     <Button onClick={saveLineageChanges} disabled={isSaveDisabled}>
-                        Save Changes
+                        保存更改
                     </Button>
                 </ModalFooter>
             }

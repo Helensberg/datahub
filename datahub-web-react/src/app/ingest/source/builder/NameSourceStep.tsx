@@ -162,12 +162,12 @@ export const NameSourceStep = ({ state, updateState, prev, submit }: StepProps) 
                     required
                     label={
                         <Typography.Text strong style={{ marginBottom: 0 }}>
-                            Name
+                            名称
                         </Typography.Text>
                     }
                     style={{ marginBottom: 8 }}
                 >
-                    <Typography.Paragraph>Give this data source a name</Typography.Paragraph>
+                    <Typography.Paragraph>为此数据源取一个名称</Typography.Paragraph>
                     <Input
                         data-testid="source-name-input"
                         className="source-name-input"

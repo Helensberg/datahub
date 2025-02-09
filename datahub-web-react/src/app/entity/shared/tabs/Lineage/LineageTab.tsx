@@ -106,7 +106,7 @@ export const LineageTab = ({
             label: (
                 <span data-testid="lineage-tab-direction-select-option-downstream">
                     <ArrowDownOutlined style={{ marginRight: 4 }} />
-                    <b>Downstream</b>
+                    <b>下游</b>
                 </span>
             ),
             value: LineageDirection.Downstream,
@@ -115,7 +115,7 @@ export const LineageTab = ({
             label: (
                 <span data-testid="lineage-tab-direction-select-option-upstream">
                     <ArrowUpOutlined style={{ marginRight: 4 }} />
-                    <b>Upstream</b>
+                    <b>上游</b>
                 </span>
             ),
             value: LineageDirection.Upstream,
@@ -134,7 +134,7 @@ export const LineageTab = ({
                             <Button type="text">
                                 <ManageLineageIcon />
                                 <Typography.Text>
-                                    <b>Edit</b>
+                                    <b>编辑</b>
                                 </Typography.Text>
                                 <StyledCaretDown />
                             </Button>
@@ -148,7 +148,7 @@ export const LineageTab = ({
                     <Button type="text" onClick={routeToLineage}>
                         <PartitionOutlined />
                         <Typography.Text>
-                            <b>Visualize Lineage</b>
+                            <b>可视化Lineage</b>
                         </Typography.Text>
                     </Button>
                 </LeftButtonsWrapper>
@@ -168,11 +168,11 @@ export const LineageTab = ({
                         setIsColumnLevelLineage={setIsColumnLevelLineage}
                     />
                     <LineageTabTimeSelector />
-                    <Tooltip title="Click to refresh data">
+                    <Tooltip title="点击刷新数据">
                         <RefreshCacheButton type="text" onClick={() => setSkipCache(true)}>
                             <ReloadOutlined />
                             <Typography.Text>
-                                <b>Refresh</b>
+                                <b>刷新</b>
                             </Typography.Text>
                         </RefreshCacheButton>
                     </Tooltip>

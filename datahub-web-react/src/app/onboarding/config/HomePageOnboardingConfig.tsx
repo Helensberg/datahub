@@ -23,25 +23,23 @@ export const HomePageOnboardingConfig: OnboardingStep[] = [
                     style={{ marginLeft: '50px' }}
                     src={dataHubFlowDiagram}
                 />
-                <Typography.Title level={3}>Welcome to DataHub! 👋</Typography.Title>
+                <Typography.Title level={3}>欢迎来到AI Data Catalog! 👋</Typography.Title>
                 <Typography.Paragraph style={{ lineHeight: '22px' }}>
-                    <strong>DataHub</strong> helps you discover and organize the important data within your
-                    organization. You can:
+                    <strong>AI Data Catalog</strong> 能帮助你发现并整理所在组织内的重要数据。你可以:
                 </Typography.Paragraph>
                 <Typography.Paragraph style={{ lineHeight: '24px' }}>
                     <ul>
                         <li>
-                            Quickly <strong>search</strong> for Datasets, Dashboards, Data Pipelines, and more
+                            快速 <strong>搜索</strong>  Datasets, Dashboards, Data Pipelines以及更多
                         </li>
                         <li>
-                            View and understand the full <strong>end-to-end Lineage</strong> of how data is created,
-                            transformed, and consumed
+                            查看 <strong>端到端的Lineage</strong> 并全面理解数据是如何创建、转化和被使用的
                         </li>
                         <li>
-                            Gain <strong>insights</strong> about how others within your organization are using data
+                            <strong>洞察</strong>组织内其他人是如何使用数据的
                         </li>
                         <li>
-                            Define <strong>ownership</strong> and capture <strong>knowledge</strong> to empower others
+                            定义<strong>ownership</strong> 并且获取赋予他人权限的<strong>方法</strong> 
                         </li>
                     </ul>
                     <p>Let&apos;s get started! 🚀</p>
@@ -57,7 +55,7 @@ export const HomePageOnboardingConfig: OnboardingStep[] = [
                     >
                         <span style={{ paddingLeft: '5px' }}>💡</span>
                         <span style={{ paddingLeft: '10px' }}>
-                            Press <strong> Cmd + Ctrl + T</strong> to open up this tutorial at any time.
+                            按下 <strong> Cmd + Ctrl + T</strong> 以便在任何时刻打开此教程.
                         </span>
                     </div>
                 </Typography.Paragraph>
@@ -71,52 +69,49 @@ export const HomePageOnboardingConfig: OnboardingStep[] = [
         title: 'Ingest Data',
         content: (
             <Typography.Paragraph>
-                Start integrating your data sources immediately by navigating to the <strong>Ingestion</strong> page.
+                立即通过导航至<strong>Ingestion</strong> 页面来整合你的数据源。
             </Typography.Paragraph>
         ),
     },
     {
         id: HOME_PAGE_DOMAINS_ID,
         selector: `#${HOME_PAGE_DOMAINS_ID}`,
-        title: 'Explore by Domain',
+        title: '通过Domain进行探索',
         content: (
             <Typography.Paragraph>
-                Here are your organization&apos;s <strong>Domains</strong>. Domains are collections of data assets -
-                such as Tables, Dashboards, and ML Models - that make it easy to discover information relevant to a
-                particular part of your organization.
+                以下是你们组织的<strong>Domains</strong>. Domains是数据资产的集合
+                比方说Tables, Dashboards, and ML模型，他们使得发现与组织特定部分相关的信息变得容易。
             </Typography.Paragraph>
         ),
     },
     {
         id: HOME_PAGE_PLATFORMS_ID,
         selector: `#${HOME_PAGE_PLATFORMS_ID}`,
-        title: 'Explore by Platform',
+        title: '通过Platform进行探索',
         content: (
             <Typography.Paragraph>
-                Here are your organization&apos;s <strong>Data Platforms</strong>. Data Platforms represent specific
-                third-party Data Systems or Tools. Examples include Data Warehouses like <strong>Snowflake</strong>,
-                Orchestrators like <strong>Airflow</strong>, and Dashboarding tools like <strong>Looker</strong>.
+                以下是你们组织的<strong>Data Platforms</strong>. Data Platforms 是特定的第三方数据系统或者工具。
+                例如数据仓库 <strong>Snowflake</strong>,编排器<strong>Airflow</strong>, 仪表盘工具<strong>Looker</strong>等。
             </Typography.Paragraph>
         ),
     },
     {
         id: HOME_PAGE_MOST_POPULAR_ID,
         selector: `#${HOME_PAGE_MOST_POPULAR_ID}`,
-        title: 'Explore Most Popular',
-        content: "Here you'll find the assets that are viewed most frequently within your organization.",
+        title: '探索最受欢迎的资产',
+        content: "在这里，你将会找到在你们组织内被查看得最为频繁的那些资产。",
     },
     {
         id: HOME_PAGE_SEARCH_BAR_ID,
         selector: `#${HOME_PAGE_SEARCH_BAR_ID}`,
-        title: 'Find your Data 🔍',
+        title: '发现你的数据 🔍',
         content: (
             <Typography.Paragraph>
                 <p>
-                    This is the <strong>Search Bar</strong>. It will serve as your launch point for discovering and
-                    collaborating around the data most important to you.
+                    这就是<strong>搜索栏</strong>. 它将作为你发现对你最重要的数据并围绕其开展协作的起始点。
                 </p>
                 <p>
-                    Not sure where to start? Click on <strong>Explore All</strong>!
+                    不确定从哪开始? 点击<strong>探索所有</strong>!
                 </p>
             </Typography.Paragraph>
         ),

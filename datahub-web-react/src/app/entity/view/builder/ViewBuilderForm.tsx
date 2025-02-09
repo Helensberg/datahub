@@ -56,7 +56,7 @@ export const ViewBuilderForm = ({ urn, mode, state, updateState }: Props) => {
         <span data-testid="view-builder-form">
             <Form form={form} initialValues={state} layout="vertical">
                 <StyledFormItem label={<Typography.Text strong>Name</Typography.Text>}>
-                    <Typography.Paragraph>Give your new View a name. </Typography.Paragraph>
+                    <Typography.Paragraph>给予你的新View一个名字. </Typography.Paragraph>
                     <Form.Item
                         name="name"
                         rules={[
@@ -78,7 +78,7 @@ export const ViewBuilderForm = ({ urn, mode, state, updateState }: Props) => {
                     </Form.Item>
                 </StyledFormItem>
                 <StyledFormItem label={<Typography.Text strong>Description</Typography.Text>}>
-                    <Typography.Paragraph>Write a description for your View.</Typography.Paragraph>
+                    <Typography.Paragraph>为你的View写一个说明。</Typography.Paragraph>
                     <Form.Item name="description" rules={[{ whitespace: true }, { min: 1, max: 500 }]} hasFeedback>
                         <Input.TextArea
                             data-testid="view-description-input"
@@ -89,7 +89,7 @@ export const ViewBuilderForm = ({ urn, mode, state, updateState }: Props) => {
                     </Form.Item>
                 </StyledFormItem>
                 <StyledFormItem label={<Typography.Text strong>Type</Typography.Text>}>
-                    <Typography.Paragraph>Select the type of your new View.</Typography.Paragraph>
+                    <Typography.Paragraph>选择你的新View的类型。</Typography.Paragraph>
                     <Form.Item name="viewType">
                         <Select
                             onSelect={(value) => setViewType(value as DataHubViewType)}
@@ -106,8 +106,7 @@ export const ViewBuilderForm = ({ urn, mode, state, updateState }: Props) => {
                 </StyledFormItem>
                 <StyledFormItem label={<Typography.Text strong>Filters</Typography.Text>} style={{ marginBottom: 8 }}>
                     <Typography.Paragraph>
-                        Select the filters that are applied when this View is selected. Assets that match these filters
-                        will be shown when the View is applied.
+                        选择在选中此View时所应用的Filters. 符合这些Filters的资产将在应用该Views时显示出来。
                     </Typography.Paragraph>
                 </StyledFormItem>
             </Form>

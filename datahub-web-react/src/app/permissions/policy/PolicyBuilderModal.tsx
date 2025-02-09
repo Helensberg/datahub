@@ -73,7 +73,7 @@ export default function PolicyBuilderModal({ policy, setPolicy, open, onClose, o
     // Step 1: Choose Policy Type
     const typeStep = () => {
         return {
-            title: 'Choose Policy Type',
+            title: '选择政策类型',
             content: (
                 <PolicyTypeForm
                     policyType={policy.type}
@@ -90,7 +90,7 @@ export default function PolicyBuilderModal({ policy, setPolicy, open, onClose, o
 
     // Step 2: Select privileges step.
     const privilegeStep = () => ({
-        title: 'Configure Privileges',
+        title: '配置权限',
         content: (
             <PolicyPrivilegeForm
                 focusPolicyUrn={focusPolicyUrn}
@@ -114,7 +114,7 @@ export default function PolicyBuilderModal({ policy, setPolicy, open, onClose, o
     // Step 3: Assign Actors Step
     const actorStep = () => {
         return {
-            title: 'Assign Users & Groups',
+            title: '分配用户和群组',
             content: (
                 <PolicyActorForm
                     policyType={policy.type}
@@ -151,8 +151,8 @@ export default function PolicyBuilderModal({ policy, setPolicy, open, onClose, o
     // modalClosePopup for outside policy modal click
     const modalClosePopup = () => {
         Modal.confirm({
-            title: 'Exit Policy Editor',
-            content: `Are you sure you want to exit policy editor? All changes will be lost`,
+            title: '退出策略编辑',
+            content: `你确定你想要退出策略编辑？所有的修改都不会被保存。`,
             onOk() {
                 onClose();
             },
@@ -167,7 +167,7 @@ export default function PolicyBuilderModal({ policy, setPolicy, open, onClose, o
         <ClickOutside onClickOutside={modalClosePopup} wrapperClassName="PolicyBuilderModal">
             <Modal
                 wrapClassName="PolicyBuilderModal"
-                title={isEditing ? 'Edit a Policy' : 'Create a new Policy'}
+                title={isEditing ? '编辑策略' : '创建一个新策略'}
                 open={open}
                 onCancel={onClose}
                 closable

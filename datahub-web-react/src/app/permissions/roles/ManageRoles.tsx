@@ -123,7 +123,7 @@ export const ManageRoles = () => {
                         userUrns: actorUrns,
                     });
                     message.success({
-                        content: `Assigned Role to users!`,
+                        content: `给用户分配角色!`,
                         duration: 2,
                     });
                     setTimeout(() => {
@@ -134,7 +134,7 @@ export const ManageRoles = () => {
             })
             .catch((e) => {
                 message.destroy();
-                message.error({ content: `Failed to assign Role to users: \n ${e.message || ''}`, duration: 3 });
+                message.error({ content: `未能给用户分配角色: \n ${e.message || ''}`, duration: 3 });
             })
             .finally(() => {
                 resetRoleState();
@@ -195,7 +195,7 @@ export const ManageRoles = () => {
             render: (_: any, record: any) => {
                 return (
                     <ActionsContainer>
-                        <Tooltip title={`Assign the ${record.name} role to users`}>
+                        <Tooltip title={`分配 ${record.name} 角色给用户`}>
                             <AddUsersButton
                                 onClick={() => {
                                     setIsBatchAddRolesModalVisible(true);
@@ -227,7 +227,7 @@ export const ManageRoles = () => {
             {rolesLoading && !rolesData && (
                 <Message type="loading" content="Loading roles..." style={{ marginTop: '10%' }} />
             )}
-            {rolesError && message.error('Failed to load roles! An unexpected error occurred.')}
+            {rolesError && message.error('未能加载角色! 出现了未知错误。')}
             <SourceContainer>
                 <TabToolbar>
                     <div />
@@ -253,7 +253,7 @@ export const ManageRoles = () => {
                     />
                     {isBatchAddRolesModalVisible && (
                         <SearchSelectModal
-                            titleText={`Assign ${focusRole?.name} Role to Users`}
+                            titleText={`分配 ${focusRole?.name} 角色给用户`}
                             continueText="Add"
                             onContinue={batchAssignRole}
                             onCancel={resetRoleState}
@@ -268,7 +268,7 @@ export const ManageRoles = () => {
                     dataSource={tableData}
                     rowKey="urn"
                     locale={{
-                        emptyText: <Empty description="No Roles!" image={Empty.PRESENTED_IMAGE_SIMPLE} />,
+                        emptyText: <Empty description="没有角色!" image={Empty.PRESENTED_IMAGE_SIMPLE} />,
                     }}
                     pagination={false}
                 />

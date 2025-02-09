@@ -364,15 +364,15 @@ export default function TagStyleEntity({ urn, useGetSearchResults = useWrappedSe
             {/* Tag Charts, Datasets and Owners */}
             <DetailsLayout>
                 <StatsBox>
-                    <StatsLabel>Applied to</StatsLabel>
+                    <StatsLabel>应用于</StatsLabel>
                     {facetLoading && (
                         <div>
-                            <EmptyStatsText>Loading...</EmptyStatsText>
+                            <EmptyStatsText>加载中</EmptyStatsText>
                         </div>
                     )}
                     {!facetLoading && aggregations && aggregations?.length === 0 && (
                         <div>
-                            <EmptyStatsText>No entities</EmptyStatsText>
+                            <EmptyStatsText>没有实体</EmptyStatsText>
                         </div>
                     )}
                     {!facetLoading &&
@@ -422,9 +422,9 @@ export default function TagStyleEntity({ urn, useGetSearchResults = useWrappedSe
                         <Button type={ownersEmpty ? 'default' : 'text'} onClick={() => setShowAddModal(true)}>
                             <PlusOutlined />
                             {ownersEmpty ? (
-                                <OwnerButtonEmptyTitle>Add Owners</OwnerButtonEmptyTitle>
+                                <OwnerButtonEmptyTitle>增加拥有者</OwnerButtonEmptyTitle>
                             ) : (
-                                <OwnerButtonTitle>Add Owners</OwnerButtonTitle>
+                                <OwnerButtonTitle>增加拥有者</OwnerButtonTitle>
                             )}
                         </Button>
                     </div>

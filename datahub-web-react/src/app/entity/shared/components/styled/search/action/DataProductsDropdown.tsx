@@ -28,7 +28,7 @@ export default function DataProductsDropdown({ urns, disabled = false, refetch }
                 if (!errors) {
                     message.loading({ content: 'Loading...', duration: 2 });
                     setTimeout(() => {
-                        message.success({ content: 'Removed Data Product!', duration: 2 });
+                        message.success({ content: '移除数据产品!', duration: 2 });
                         refetch?.();
                     }, 2000);
                 }
@@ -37,7 +37,7 @@ export default function DataProductsDropdown({ urns, disabled = false, refetch }
                 message.destroy();
                 message.error(
                     handleBatchError(urns, e, {
-                        content: `Failed to remove assets from Data Product: \n ${e.message || ''}`,
+                        content: `未能移除数据产品: \n ${e.message || ''}`,
                         duration: 3,
                     }),
                 );
@@ -50,17 +50,17 @@ export default function DataProductsDropdown({ urns, disabled = false, refetch }
                 name="Data Product"
                 actions={[
                     {
-                        title: 'Set Data Product',
+                        title: '设定数据产品',
                         onClick: () => {
                             setIsEditModalVisible(true);
                         },
                     },
                     {
-                        title: 'Unset Data Product',
+                        title: '取消设定数据产品',
                         onClick: () => {
                             Modal.confirm({
-                                title: `If you continue, Data Product will be removed for the selected assets.`,
-                                content: `Are you sure you want to unset Data Product for these assets?`,
+                                title: `如果你继续，数据产品设定将被取消.`,
+                                content: `你确定你讲取消设定数据产品?`,
                                 onOk() {
                                     batchUnsetDataProducts();
                                 },

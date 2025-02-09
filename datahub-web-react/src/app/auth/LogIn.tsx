@@ -95,7 +95,7 @@ export const LogIn: React.VFC<LogInProps> = () => {
                     return Promise.resolve();
                 })
                 .catch((_) => {
-                    message.error(`Failed to log in! An unexpected error occurred.`);
+                    message.error(`登录失败！出现了未知错误。`);
                 })
                 .finally(() => setLoading(false));
         },
@@ -122,14 +122,14 @@ export const LogIn: React.VFC<LogInProps> = () => {
                         <Form.Item
                             name="username"
                             // eslint-disable-next-line jsx-a11y/label-has-associated-control
-                            label={<label style={{ color: 'black' }}>Username</label>}
+                            label={<label style={{ color: 'black' }}>用户名</label>}
                         >
                             <FormInput prefix={<UserOutlined />} data-testid="username" />
                         </Form.Item>
                         <Form.Item
                             name="password"
                             // eslint-disable-next-line jsx-a11y/label-has-associated-control
-                            label={<label style={{ color: 'black' }}>Password</label>}
+                            label={<label style={{ color: 'black' }}>密码</label>}
                         >
                             <FormInput prefix={<LockOutlined />} type="password" data-testid="password" />
                         </Form.Item>
@@ -145,7 +145,7 @@ export const LogIn: React.VFC<LogInProps> = () => {
                                         className={styles.login_button}
                                         disabled={!formIsComplete}
                                     >
-                                        Sign In
+                                        登录
                                     </Button>
                                 );
                             }}
@@ -154,7 +154,7 @@ export const LogIn: React.VFC<LogInProps> = () => {
                     <SsoDivider />
                     <SsoButton type="primary" href="/sso" block htmlType="submit" className={styles.sso_button}>
                         <LoginLogo />
-                        <SsoTextSpan>Sign in with SSO</SsoTextSpan>
+                        <SsoTextSpan>以SSO登录</SsoTextSpan>
                         <span />
                     </SsoButton>
                 </div>

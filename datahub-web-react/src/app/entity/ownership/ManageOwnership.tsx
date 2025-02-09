@@ -36,9 +36,9 @@ export const ManageOwnership = () => {
     return (
         <PageContainer>
             <PageHeaderContainer>
-                <PageTitle level={3}>Manage Ownership</PageTitle>
+                <PageTitle level={3}>管理Ownership</PageTitle>
                 <Typography.Paragraph type="secondary">
-                    Create, edit, and remove custom Ownership Types.
+                    创建、编辑和删除自定义的Ownership类型。
                 </Typography.Paragraph>
             </PageHeaderContainer>
             <ListContainer>

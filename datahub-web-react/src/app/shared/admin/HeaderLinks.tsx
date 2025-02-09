@@ -81,9 +81,9 @@ export function HeaderLinks(props: Props) {
                 <Link to="/glossary">
                     <NavTitleContainer>
                         <BookOutlined style={{ fontSize: '14px', fontWeight: 'bold' }} />
-                        <NavTitleText>Glossary</NavTitleText>
+                        <NavTitleText>术语表</NavTitleText>
                     </NavTitleContainer>
-                    <NavTitleDescription>View and modify your data dictionary</NavTitleDescription>
+                    <NavTitleDescription>查看并修改你的数据字典</NavTitleDescription>
                 </Link>
             ),
         },
@@ -98,9 +98,9 @@ export function HeaderLinks(props: Props) {
                                 fontWeight: 'bold',
                             }}
                         />
-                        <NavTitleText>Domains</NavTitleText>
+                        <NavTitleText>数据域</NavTitleText>
                     </NavTitleContainer>
-                    <NavTitleDescription>Manage related groups of data assets</NavTitleDescription>
+                    <NavTitleDescription>管理相关的数据资产组</NavTitleDescription>
                 </Link>
             ),
         },
@@ -117,9 +117,9 @@ export function HeaderLinks(props: Props) {
                                           fontWeight: 'bold',
                                       }}
                                   />
-                                  <NavTitleText>Business Attribute</NavTitleText>
+                                  <NavTitleText>业务属性</NavTitleText>
                               </NavTitleContainer>
-                              <NavTitleDescription>Universal field for data consistency</NavTitleDescription>
+                              <NavTitleDescription>用于数据一致性的通用字段</NavTitleDescription>
                           </Link>
                       ),
                   },
@@ -133,10 +133,10 @@ export function HeaderLinks(props: Props) {
                 <LinkWrapper>
                     <Link to="/analytics">
                         <Button type="text">
-                            <Tooltip title="View DataHub usage analytics">
+                            <Tooltip title="查看元数据分析">
                                 <NavTitleContainer>
                                     <BarChartOutlined />
-                                    <NavTitleText>Analytics</NavTitleText>
+                                    <NavTitleText>分析</NavTitleText>
                                 </NavTitleContainer>
                             </Tooltip>
                         </Button>
@@ -146,7 +146,7 @@ export function HeaderLinks(props: Props) {
             <Dropdown trigger={['click']} menu={{ items }}>
                 <LinkWrapper>
                     <Button type="text">
-                        <SolutionOutlined /> Govern <DownOutlined style={{ fontSize: '6px' }} />
+                        <SolutionOutlined /> 元数据治理 <DownOutlined style={{ fontSize: '6px' }} />
                     </Button>
                 </LinkWrapper>
             </Dropdown>
@@ -154,10 +154,10 @@ export function HeaderLinks(props: Props) {
                 <LinkWrapper>
                     <Link to="/ingestion">
                         <Button id={HOME_PAGE_INGESTION_ID} type="text">
-                            <Tooltip title="Connect DataHub to your organization's data sources">
+                            <Tooltip title="将你的数据源连接为AI Data Catalog">
                                 <NavTitleContainer>
                                     <ApiOutlined />
-                                    <NavTitleText>Ingestion</NavTitleText>
+                                    <NavTitleText>数据导入</NavTitleText>
                                 </NavTitleContainer>
                             </Tooltip>
                         </Button>
@@ -168,7 +168,7 @@ export function HeaderLinks(props: Props) {
                 <LinkWrapper style={{ marginRight: 12 }}>
                     <Link to="/settings">
                         <Button type="text">
-                            <Tooltip title="Manage your DataHub settings">
+                            <Tooltip title="管理你的设置">
                                 <SettingOutlined />
                             </Tooltip>
                         </Button>

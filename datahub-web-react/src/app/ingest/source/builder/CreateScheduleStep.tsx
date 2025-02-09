@@ -137,14 +137,14 @@ export const CreateScheduleStep = ({ state, updateState, goTo, prev }: StepProps
     return (
         <>
             <Section>
-                <SelectTemplateHeader level={5}>Configure an Ingestion Schedule</SelectTemplateHeader>
+                <SelectTemplateHeader level={5}>配置一个导入计划</SelectTemplateHeader>
             </Section>
             <RequiredFieldForm layout="vertical">
                 <Form.Item
                     tooltip="Enable to run ingestion syncs on a schedule. Running syncs on a schedule helps to keep information up to date."
                     label={
                         <Typography.Text strong>
-                            Run on a schedule <Typography.Text type="secondary">(Recommended)</Typography.Text>
+                            运行计划 <Typography.Text type="secondary">(推荐)</Typography.Text>
                         </Typography.Text>
                     }
                 >
@@ -152,7 +152,7 @@ export const CreateScheduleStep = ({ state, updateState, goTo, prev }: StepProps
                     {!scheduleEnabled && (
                         <WarningContainer>
                             <StyledWarningOutlined />
-                            Running ingestion without a schedule may result in out-of-date information.
+                            不按计划进行数据导入可能会导致信息过时.
                         </WarningContainer>
                     )}
                 </Form.Item>

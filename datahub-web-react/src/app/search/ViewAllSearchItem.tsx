@@ -33,7 +33,7 @@ function ViewAllSearchItem({ searchTarget: searchText }: { searchTarget?: string
             <ExploreForEntity>
                 <SearchOutlined />
                 <ExploreForEntityText>
-                    View all results for <Typography.Text strong>{searchText}</Typography.Text>
+                    查看所有的结果 <Typography.Text strong>{searchText}</Typography.Text>
                 </ExploreForEntityText>
             </ExploreForEntity>
             <ReturnKey keyboard disabled>
