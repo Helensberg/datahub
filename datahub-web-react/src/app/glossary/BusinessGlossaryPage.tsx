@@ -117,7 +117,7 @@ function BusinessGlossaryPage() {
                                 type="text"
                                 onClick={() => setIsCreateTermModalVisible(true)}
                             >
-                                <PlusOutlined /> Add Term
+                                <PlusOutlined /> 增加Term
                             </Button>
                             <Button
                                 data-testid="add-term-group-button"
@@ -126,7 +126,7 @@ function BusinessGlossaryPage() {
                                 type="text"
                                 onClick={() => setIsCreateNodeModalVisible(true)}
                             >
-                                <PlusOutlined /> Add Term Group
+                                <PlusOutlined /> 增加Term Group
                             </Button>
                         </div>
                     </HeaderWrapper>

@@ -33,7 +33,7 @@ export const ManageDomainsPage = () => {
                 <PageHeaderContainer>
                     <PageTitle level={3}>Domains</PageTitle>
                     <Typography.Paragraph type="secondary">
-                        View your DataHub Domains. Take administrative actions.
+                        查看你的AI Data Catalog Domains。并采取管理行动。
                     </Typography.Paragraph>
                 </PageHeaderContainer>
                 <ListContainer>

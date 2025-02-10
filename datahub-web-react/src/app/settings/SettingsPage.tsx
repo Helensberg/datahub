@@ -127,8 +127,8 @@ export const SettingsPage = () => {
         <PageContainer>
             <SettingsBarContainer>
                 <SettingsBarHeader>
-                    <PageTitle level={3}>Settings</PageTitle>
-                    <Typography.Paragraph type="secondary">Manage your DataHub settings.</Typography.Paragraph>
+                    <PageTitle level={3}>设置</PageTitle>
+                    <Typography.Paragraph type="secondary">管理你的AI Data Catalog设置。</Typography.Paragraph>
                 </SettingsBarHeader>
                 <ThinDivider />
                 <Menu
@@ -143,7 +143,7 @@ export const SettingsPage = () => {
                     <Menu.ItemGroup title="Developer">
                         <Menu.Item key="tokens">
                             <SafetyCertificateOutlined />
-                            <ItemTitle>Access Tokens</ItemTitle>
+                            <ItemTitle>访问令牌</ItemTitle>
                         </Menu.Item>
                     </Menu.ItemGroup>
                     {(showPolicies || showUsersGroups) && (
@@ -151,13 +151,13 @@ export const SettingsPage = () => {
                             {showUsersGroups && (
                                 <Menu.Item key="identities">
                                     <UsergroupAddOutlined />
-                                    <ItemTitle>Users & Groups</ItemTitle>
+                                    <ItemTitle>用户和群组</ItemTitle>
                                 </Menu.Item>
                             )}
                             {showPolicies && (
                                 <Menu.Item key="permissions">
                                     <BankOutlined />
-                                    <ItemTitle>Permissions</ItemTitle>
+                                    <ItemTitle>权限</ItemTitle>
                                 </Menu.Item>
                             )}
                         </Menu.ItemGroup>
@@ -167,23 +167,23 @@ export const SettingsPage = () => {
                             {showFeatures && (
                                 <MenuItem key="features">
                                     <ControlOutlined />
-                                    <ItemTitle>Features</ItemTitle>
+                                    <ItemTitle>功能</ItemTitle>
                                     <NewTag>New!</NewTag>
                                 </MenuItem>
                             )}
                             {showViews && (
                                 <Menu.Item key="views">
-                                    <FilterOutlined /> <ItemTitle>My Views</ItemTitle>
+                                    <FilterOutlined /> <ItemTitle>我的视图</ItemTitle>
                                 </Menu.Item>
                             )}
                             {showOwnershipTypes && (
                                 <Menu.Item key="ownership">
-                                    <TeamOutlined /> <ItemTitle>Ownership Types</ItemTitle>
+                                    <TeamOutlined /> <ItemTitle>Ownership类型</ItemTitle>
                                 </Menu.Item>
                             )}
                             {showHomePagePosts && (
                                 <Menu.Item key="posts">
-                                    <PushpinOutlined /> <ItemTitle>Home Page Posts</ItemTitle>
+                                    <PushpinOutlined /> <ItemTitle>主页帖子</ItemTitle>
                                 </Menu.Item>
                             )}
                         </Menu.ItemGroup>
@@ -192,7 +192,7 @@ export const SettingsPage = () => {
                     <Menu.ItemGroup title="Preferences">
                         <Menu.Item key="preferences">
                             <ToolOutlined />
-                            <ItemTitle>Appearance</ItemTitle>
+                            <ItemTitle>外观</ItemTitle>
                         </Menu.Item>
                     </Menu.ItemGroup>
                 </Menu>

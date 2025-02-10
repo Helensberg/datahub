@@ -52,15 +52,14 @@ export const IngestionDocumentationHint = ({ sourceConfigs, onHide }: Props) => 
             </Header>
             <Description>
                 <div style={{ marginBottom: 8 }}>
-                    To import from {displayName}, we&apos;ll need some more information to connect to your instance.
+                    为了能从 {displayName}导入数据, 我们&apos;需要得到更多相关信息.
                 </div>
                 <div>
-                    Check out the{' '}
+                    检查{' '}
                     <a href={docsUrl} target="_blank" rel="noopener noreferrer">
                         {displayName} Guide
                     </a>{' '}
-                    to understand the prerequisites, learn about available settings, and view examples to help connect
-                    to the data source.
+                    去了解先决条件,l了解可用的设置,并查看示例以帮助连接到数据源。
                 </div>
             </Description>
         </Container>

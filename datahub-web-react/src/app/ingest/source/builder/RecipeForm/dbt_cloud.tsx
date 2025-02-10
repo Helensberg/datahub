@@ -287,15 +287,13 @@ export const TARGET_PLATFORM_INSTANCE: RecipeField = {
     tooltip: (
         <span>
             <TipSection>
-                The DataHub Platform Instance identifier that should be used for the assets extracted from dbt.
+                从dbt中提取的资产应使用的AI Data Catalog平台实例标识符。
             </TipSection>
             <TipSection>
-                This is used to correctly connect the metadata extracted from the Data Platform with that extracted from
-                dbt Cloud.
+                这用于将从数据平台提取的元数据与从 dbt Cloud 提取的元数据正确连接起来。
             </TipSection>
             <TipSection>
-                Leave this blank if you have not configured a Data Platform Instance when ingesting from the associated
-                Data Platform.
+                如果在从相关数据平台摄取数据时未配置数据平台实例，请将此留空。
             </TipSection>
         </span>
     ),

@@ -7,29 +7,18 @@ export const ROLES_INTRO_ID = 'roles-intro';
 export const RolesOnboardingConfig: OnboardingStep[] = [
     {
         id: ROLES_INTRO_ID,
-        title: 'Roles',
+        title: '角色',
         content: (
             <Typography.Paragraph>
                 <p>
-                    Welcome to DataHub <strong>Roles</strong>!
+                    欢迎来到AI Data Catalog<strong>角色</strong>!
                 </p>
                 <p>
-                    <strong>Roles</strong> are the recommended way to manage permissions on DataHub.
+                    <strong>角色</strong> 是在此平台上管理用户权限的最佳方式。
                 </p>
                 <p>
-                    DataHub currently supports three out-of-the-box Roles: <strong>Admin</strong>,{' '}
-                    <strong>Editor</strong> and <strong>Reader</strong>.
-                </p>
-                <p>
-                    Learn more about <strong>Roles</strong> and the different permissions for each Role{' '}
-                    <a
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        href="https://datahubproject.io/docs/authorization/roles"
-                    >
-                        {' '}
-                        here.
-                    </a>
+                    AI Data Catalog目前支持三种可用的角色： <strong>管理员</strong>,{' '}
+                    <strong>编辑</strong> 和 <strong>读者</strong>.
                 </p>
             </Typography.Paragraph>
         ),

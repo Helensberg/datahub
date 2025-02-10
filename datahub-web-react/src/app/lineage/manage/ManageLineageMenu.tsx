@@ -106,7 +106,7 @@ export default function ManageLineageMenu({
                           >
                               <MenuItemContent>
                                   <ArrowUpOutlined />
-                                  &nbsp; Edit Upstream
+                                  &nbsp; 编辑上游
                               </MenuItemContent>
                           </Popover>
                       </MenuItemStyle>
@@ -127,7 +127,7 @@ export default function ManageLineageMenu({
                           >
                               <MenuItemContent>
                                   <ArrowDownOutlined />
-                                  &nbsp; Edit Downstream
+                                  &nbsp; 编辑下游
                               </MenuItemContent>
                           </Popover>
                       </MenuItemStyle>
@@ -140,7 +140,7 @@ export default function ManageLineageMenu({
                   label: (
                       <MenuItemStyle onClick={centerEntity}>
                           <StyledImage src={FocusIcon} alt="focus on entity" />
-                          &nbsp; Focus on Entity
+                          &nbsp; 专注于实体
                       </MenuItemStyle>
                   ),
               }

@@ -4,7 +4,7 @@ import { userEntity, UserEntityArg } from '../entity/userEntity';
 import { generateData } from './dataGenerator';
 
 // login with one of these usernames
-const usernames = ['kafka', 'looker', 'datahub'];
+const usernames = ['kafka', 'looker', 'aidatacatalog'];
 
 type SearchResultArg = UserEntityArg;
 

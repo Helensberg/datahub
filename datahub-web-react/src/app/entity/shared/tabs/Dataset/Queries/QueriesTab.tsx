@@ -105,7 +105,7 @@ export default function QueriesTab() {
                 )}
                 {highlightedQueries.length > 0 && (
                     <QueriesListSection
-                        title="Highlighted Queries"
+                        title="高亮查询"
                         tooltip="Shared queries relevant to this dataset"
                         queries={highlightedQueries}
                         showEdit
@@ -116,7 +116,7 @@ export default function QueriesTab() {
                 )}
                 {recentQueries.length > 0 && (
                     <QueriesListSection
-                        title="Recent Queries"
+                        title="最近查询"
                         tooltip="Queries that have been recently run against this dataset"
                         queries={recentQueries}
                         showDetails={false}

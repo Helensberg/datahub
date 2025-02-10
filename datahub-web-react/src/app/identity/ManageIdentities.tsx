@@ -79,9 +79,9 @@ export const ManageIdentities = () => {
     return (
         <PageContainer>
             <PageHeaderContainer>
-                <PageTitle level={3}>Manage Users & Groups</PageTitle>
+                <PageTitle level={3}>管理用户和群组</PageTitle>
                 <Typography.Paragraph type="secondary">
-                    View your DataHub users & groups. Take administrative actions.
+                    查看你的AI Data Catalog用户和群组，并采取管理措施.
                 </Typography.Paragraph>
             </PageHeaderContainer>
             <Content>

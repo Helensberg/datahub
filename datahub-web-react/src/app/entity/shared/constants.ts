@@ -31,56 +31,56 @@ export const ANTD_GRAY_V2 = {
 
 export const EMPTY_MESSAGES = {
     documentation: {
-        title: 'No documentation yet',
-        description: 'Share your knowledge by adding documentation and links to helpful resources.',
+        title: '无文档',
+        description: '通过添加文档以及有助于理解的资源链接来分享你的知识。',
     },
     tags: {
-        title: 'No tags added yet',
-        description: 'Tag entities to help make them more discoverable and call out their most important attributes.',
+        title: '无标签',
+        description: '给实体添加标签以帮助使其更易被发现，并突出它们最重要的属性。',
     },
     terms: {
-        title: 'No terms added yet',
-        description: 'Apply glossary terms to entities to classify their data.',
+        title: '无术语',
+        description: '将词汇表中的术语应用于实体以对其数据进行分类。',
     },
     owners: {
-        title: 'No owners added yet',
-        description: 'Adding owners helps you keep track of who is responsible for this data.',
+        title: '无所有者',
+        description: '添加所有者有助于你追踪谁应对这些数据负责。',
     },
     properties: {
-        title: 'No properties',
-        description: 'Properties will appear here if they exist in your data source.',
+        title: '无属性',
+        description: '如果你的数据源中存在属性，它们将会在此处显示。',
     },
     queries: {
-        title: 'No queries yet',
-        description: 'Create, view, and share commonly used queries for this dataset.',
+        title: '无查询',
+        description: '针对该数据集创建、查看以及分享常用查询。',
     },
     domain: {
-        title: 'No domain set',
-        description: 'Group related entities based on your organizational structure using by adding them to a Domain.',
+        title: '未设置域',
+        description: '通过将相关实体添加到一个域中，依据你的组织结构对它们进行分组。',
     },
     dataProduct: {
-        title: 'No data product set',
-        description: 'Group related entities based on shared characteristics by adding them to a Data Product.',
+        title: '未设置数据产品',
+        description: '通过将相关实体添加到一个数据产品中，依据共享特征对它们进行分组。',
     },
     contains: {
-        title: 'Contains no Terms',
-        description: 'Terms can contain other terms to represent a "Has A" style relationship.',
+        title: '不包含任何术语',
+        description: '术语可以包含其他术语以表示一种 “有一个” 样式的关系。',
     },
     inherits: {
-        title: 'Does not inherit from any terms',
-        description: 'Terms can inherit from other terms to represent an "Is A" style relationship.',
+        title: '不继承自任何术语',
+        description: '术语可以从其他术语继承而来，以表示一种 “是一个” 样式的关系。',
     },
-    'contained by': {
-        title: 'Is not contained by any terms',
-        description: 'Terms can be contained by other terms to represent a "Has A" style relationship.',
+    '被包含': {
+        title: '不被任何术语所包含',
+        description: '术语可以被其他术语所包含，以表示一种 “有一个” 样式的关系。',
     },
-    'inherited by': {
-        title: 'Is not inherited by any terms',
-        description: 'Terms can be inherited by other terms to represent an "Is A" style relationship.',
+    '被继承': {
+        title: '不继承自任何术语',
+        description: '术语可以从其他术语继承而来，以表示一种 “是一个” 样式的关系。',
     },
     businessAttributes: {
-        title: 'No business attributes added yet',
-        description: 'Add business attributes to entities to classify their data.',
+        title: '还尚未添加任何业务属性',
+        description: '给实体添加业务属性以对其数据进行分类。',
     },
 };
 

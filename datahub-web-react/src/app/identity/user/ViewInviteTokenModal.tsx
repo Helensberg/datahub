@@ -164,7 +164,7 @@ export default function ViewInviteTokenModal({ open, onClose }: Props) {
             footer={null}
             title={
                 <Typography.Text>
-                    <b>Share Invite Link</b>
+                    <b>分享邀请链接</b>
                 </Typography.Text>
             }
             open={open}
@@ -191,7 +191,7 @@ export default function ViewInviteTokenModal({ open, onClose }: Props) {
                     <CopyText>
                         <pre>{inviteLink}</pre>
                     </CopyText>
-                    <Tooltip title="Copy invite link.">
+                    <Tooltip title="复制邀请链接.">
                         <CopyButton
                             onClick={() => {
                                 navigator.clipboard.writeText(inviteLink);
@@ -201,7 +201,7 @@ export default function ViewInviteTokenModal({ open, onClose }: Props) {
                             COPY
                         </CopyButton>
                     </Tooltip>
-                    <Tooltip title="Generate a new link. Any old links will no longer be valid.">
+                    <Tooltip title="生成一个新的链接。任何旧的链接将不再有效。">
                         <RefreshButton
                             onClick={() => {
                                 createInviteToken(selectedRole?.urn);
@@ -212,8 +212,7 @@ export default function ViewInviteTokenModal({ open, onClose }: Props) {
                     </Tooltip>
                 </InviteLinkDiv>
                 <ModalSectionFooter type="secondary">
-                    Copy an invite link to send to your users. When they join, users will be automatically assigned to
-                    the selected role.
+                    复制一个邀请链接并发送给你的用户。当他们加入时，用户将会自动被赋予选定的角色。
                 </ModalSectionFooter>
             </ModalSection>
         </Modal>

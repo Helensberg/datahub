@@ -77,9 +77,9 @@ export const ManagePermissions = () => {
     return (
         <PageContainer>
             <PageHeaderContainer>
-                <PageTitle level={3}>Manage Permissions</PageTitle>
+                <PageTitle level={3}>管理权限</PageTitle>
                 <Typography.Paragraph type="secondary">
-                    View your DataHub permissions. Take administrative actions.
+                    查看你的AI Data Catalog 权限。并采取管理措施。
                 </Typography.Paragraph>
             </PageHeaderContainer>
             <Content>

@@ -8,29 +8,17 @@ export const POLICIES_CREATE_POLICY_ID = 'policies-create-policy';
 export const PoliciesOnboardingConfig: OnboardingStep[] = [
     {
         id: POLICIES_INTRO_ID,
-        title: 'Policies',
+        title: '策略',
         content: (
             <Typography.Paragraph>
                 <p>
-                    Welcome to DataHub <strong>Policies</strong>!
+                    欢迎来到AI Data Catalog <strong>策略</strong>!
                 </p>
                 <p>
-                    In most cases, <strong>Roles</strong> are the best option for granting privileges to DataHub users.
+                    在绝大多数情况下， <strong>角色</strong> 是授予AI Data Catalog用户权限的最佳选择。
                 </p>
                 <p>
-                    When more fine-grained control over user and group permissions is required, then{' '}
-                    <strong>Policies</strong> will do the trick.
-                </p>
-                <p>
-                    Learn more about <strong>Policies</strong>{' '}
-                    <a
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        href="https://datahubproject.io/docs/authorization/policies"
-                    >
-                        {' '}
-                        here.
-                    </a>
+                    当需要对用户和组的权限进行更精细的控制时，<strong>策略</strong> 就发挥作用了。
                 </p>
             </Typography.Paragraph>
         ),
@@ -38,11 +26,11 @@ export const PoliciesOnboardingConfig: OnboardingStep[] = [
     {
         id: POLICIES_CREATE_POLICY_ID,
         selector: `#${POLICIES_CREATE_POLICY_ID}`,
-        title: 'Create a new Policy',
+        title: '创建一个新的策略',
         content: (
             <Typography.Paragraph>
                 <p>
-                    Click here to create a new <strong>Policy</strong>.
+                    点击这里去创建一个新的<strong>策略</strong>。
                 </p>
             </Typography.Paragraph>
         ),

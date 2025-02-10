@@ -62,13 +62,13 @@ export default function ViewResetTokenModal({ open, userUrn, username, onClose }
                         userUrn,
                     });
                     setHasGeneratedResetToken(true);
-                    message.success('Generated new link to reset credentials');
+                    message.success('生成了用于重置凭证的新链接');
                 }
             })
             .catch((e) => {
                 message.destroy();
                 message.error({
-                    content: `Failed to create new link to reset credentials : \n ${e.message || ''}`,
+                    content: `未能生成用于重置凭证的新链接: \n ${e.message || ''}`,
                     duration: 3,
                 });
             });
@@ -84,7 +84,7 @@ export default function ViewResetTokenModal({ open, userUrn, username, onClose }
             footer={null}
             title={
                 <Typography.Text>
-                    <b>Reset User Password</b>
+                    <b>重设用户密码</b>
                 </Typography.Text>
             }
             open={open}
@@ -94,8 +94,8 @@ export default function ViewResetTokenModal({ open, userUrn, username, onClose }
                 <ModalSection>
                     <ModalSectionHeader strong>Share reset link</ModalSectionHeader>
                     <ModalSectionParagraph>
-                        Share this reset link to reset the credentials for {username}.
-                        <b>This link will expire in 24 hours.</b>
+                        分享此链接给{username}去重置凭证。
+                        <b>此链接会在24小时后失效。</b>
                     </ModalSectionParagraph>
                     <Typography.Paragraph copyable={{ text: inviteLink }}>
                         <pre>{inviteLink}</pre>
@@ -103,16 +103,16 @@ export default function ViewResetTokenModal({ open, userUrn, username, onClose }
                 </ModalSection>
             ) : (
                 <ModalSection>
-                    <ModalSectionHeader strong>A new link must be generated</ModalSectionHeader>
+                    <ModalSectionHeader strong>一个新链接一定会被生成</ModalSectionHeader>
                     <ModalSectionParagraph>
-                        You cannot view any old reset links. Please generate a new one below.
+                        你不能查看任何旧链接. 请在下方生成新链接.
                     </ModalSectionParagraph>
                 </ModalSection>
             )}
             <ModalSection>
-                <ModalSectionHeader strong>Generate a new link</ModalSectionHeader>
+                <ModalSectionHeader strong>生成新链接！</ModalSectionHeader>
                 <ModalSectionParagraph>
-                    Generate a new reset link! Note, any old links will <b>cease to be active</b>.
+                    生成了新的重置链接! 请注意，任何旧链接将不再有效。
                 </ModalSectionParagraph>
                 <CreateResetTokenButton
                     onClick={createNativeUserResetToken}

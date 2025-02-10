@@ -200,13 +200,13 @@ export const SecretsList = () => {
 
     const tableColumns = [
         {
-            title: 'Name',
+            title: '名称',
             dataIndex: 'name',
             key: 'name',
             render: (name: string) => <Typography.Text strong>{name}</Typography.Text>,
         },
         {
-            title: 'Description',
+            title: '描述',
             dataIndex: 'description',
             key: 'description',
             render: (description: any) => {
@@ -248,12 +248,12 @@ export const SecretsList = () => {
                             type="text"
                             onClick={() => setIsCreatingSecret(true)}
                         >
-                            <PlusOutlined /> Create new secret
+                            <PlusOutlined /> 创建新的机密信息
                         </Button>
                     </div>
                     <SearchBar
                         initialQuery={query || ''}
-                        placeholderText="Search secrets..."
+                        placeholderText="搜寻机密信息..."
                         suggestions={[]}
                         style={{
                             maxWidth: 220,
@@ -277,7 +277,7 @@ export const SecretsList = () => {
                     dataSource={tableData}
                     rowKey="urn"
                     locale={{
-                        emptyText: <Empty description="No Secrets found!" image={Empty.PRESENTED_IMAGE_SIMPLE} />,
+                        emptyText: <Empty description="没有发现机密信息!" image={Empty.PRESENTED_IMAGE_SIMPLE} />,
                     }}
                     pagination={false}
                 />

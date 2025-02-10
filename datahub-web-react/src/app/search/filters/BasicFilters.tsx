@@ -125,7 +125,7 @@ export default function BasicFilters({
                         onClick={showAdvancedFilters}
                         marginTop={0}
                     >
-                        Advanced Filters
+                        高级筛选
                     </TextButton>
                 </FilterButtonsWrapper>
             </FlexSpacer>

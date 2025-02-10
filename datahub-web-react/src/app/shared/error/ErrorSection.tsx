@@ -69,12 +69,12 @@ export const ErrorSection = (): JSX.Element => {
                 <MessageSection>
                     <Typography.Title level={2}>Something went wrong.</Typography.Title>
                     <DetailParagraph type="secondary">
-                        An unexpected error occurred. Please try again later, or reach out to your administrator
+                        发生了一个意外错误。请稍后再试，或者联系你的管理员。
                     </DetailParagraph>
                 </MessageSection>
                 <div>
                     <DetailParagraph type="secondary">
-                        <b>Need support?</b> Check out these resources:
+                        <b>需要支持?</b> 检查这些资源:
                     </DetailParagraph>
                     <ResourceList>
                         {resources.map((resource) => (

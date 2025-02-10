@@ -50,7 +50,7 @@ export function LineageVizToggles({ showExpandedTitles, setShowExpandedTitles }:
                     onChange={(checked) => setShowExpandedTitles(checked)}
                 />{' '}
                 <ControlLabel>
-                    <b>Show Full Titles</b>
+                    <b>显示所有的标题</b>
                 </ControlLabel>
             </ControlDiv>
             {!showSeparateSiblings && (
@@ -68,8 +68,8 @@ export function LineageVizToggles({ showExpandedTitles, setShowExpandedTitles }:
                         }}
                     />{' '}
                     <ControlLabel>
-                        <b>Compress Lineage</b>
-                        <Tooltip title="Collapses related entities into a single lineage node" placement="topRight">
+                        <b>压缩Lineage</b>
+                        <Tooltip title="将相关实体折叠到lineage节点中" placement="topRight">
                             <HelpIcon />
                         </Tooltip>
                     </ControlLabel>
@@ -90,7 +90,7 @@ export function LineageVizToggles({ showExpandedTitles, setShowExpandedTitles }:
                     }}
                 />{' '}
                 <ControlLabel>
-                    <b>Show Columns</b>
+                    <b>显示列</b>
                 </ControlLabel>
             </ControlDiv>
         </>

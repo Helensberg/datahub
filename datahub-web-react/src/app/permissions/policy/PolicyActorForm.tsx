@@ -236,22 +236,19 @@ export default function PolicyActorForm({ policyType, actors, setActors }: Props
     return (
         <ActorForm layout="vertical">
             <ActorFormHeader>
-                <Typography.Title level={4}>Applies to</Typography.Title>
-                <Typography.Paragraph>Select the users & groups that this policy should apply to.</Typography.Paragraph>
+                <Typography.Title level={4}>应用于</Typography.Title>
+                <Typography.Paragraph>选择此策略应应用到的用户和群组.</Typography.Paragraph>
             </ActorFormHeader>
             {showAppliesToOwners && (
                 <Form.Item label={<Typography.Text strong>Owners</Typography.Text>} labelAlign="right">
                     <Typography.Paragraph>
-                        Whether this policy should be apply to owners of the Metadata asset. If true, those who are
-                        marked as owners of a Metadata Asset, either directly or indirectly via a Group, will have the
-                        selected privileges.
+                    此策略是否应应用于元数据资产的所有者。如果为真，那些被标记为元数据资产所有者的人，无论是直接还是通过组间接标记的，都将拥有所选的特权。
                     </Typography.Paragraph>
                     <Switch size="small" checked={actors.resourceOwners} onChange={onToggleAppliesToOwners} />
                     {actors.resourceOwners && (
                         <OwnershipWrapper>
                             <Typography.Paragraph>
-                                List of types of ownership which will be used to match owners. If empty, the policies
-                                will applied to any type of ownership.
+                                用于匹配所有者的Ownership类型列表。如果为空,策略将应用于任何类型的Ownership。
                             </Typography.Paragraph>
                             <Select
                                 value={ownershipTypesSelectValue}
@@ -279,10 +276,9 @@ export default function PolicyActorForm({ policyType, actors, setActors }: Props
                     )}
                 </Form.Item>
             )}
-            <Form.Item label={<Typography.Text strong>Users</Typography.Text>}>
+            <Form.Item label={<Typography.Text strong>用户</Typography.Text>}>
                 <Typography.Paragraph>
-                    Search for specific users that this policy should apply to, or select `All Users` to apply it to all
-                    users.
+                    搜索此策略应应用到的特定用户，或者选择 “所有用户” 以将其应用到所有用户。
                 </Typography.Paragraph>
                 <Select
                     data-testid="users"
@@ -298,13 +294,12 @@ export default function PolicyActorForm({ policyType, actors, setActors }: Props
                     {userSearchResults?.map((result) => (
                         <Select.Option value={result.entity.urn}>{renderSearchResult(result)}</Select.Option>
                     ))}
-                    <Select.Option value="All">All Users</Select.Option>
+                    <Select.Option value="All">所有用户</Select.Option>
                 </Select>
             </Form.Item>
             <Form.Item label={<Typography.Text strong>Groups</Typography.Text>}>
                 <Typography.Paragraph>
-                    Search for specific groups that this policy should apply to, or select `All Groups` to apply it to
-                    all groups.
+                    搜索此策略应应用到的特定群组，或者选择 “所有群组” 以将其应用到所有群组。
                 </Typography.Paragraph>
                 <Select
                     data-testid="groups"
@@ -320,7 +315,7 @@ export default function PolicyActorForm({ policyType, actors, setActors }: Props
                     {groupSearchResults?.map((result) => (
                         <Select.Option value={result.entity.urn}>{renderSearchResult(result)}</Select.Option>
                     ))}
-                    <Select.Option value="All">All Groups</Select.Option>
+                    <Select.Option value="All">所有群组</Select.Option>
                 </Select>
             </Form.Item>
         </ActorForm>

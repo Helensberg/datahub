@@ -12,18 +12,11 @@ export const DomainsOnboardingConfig: OnboardingStep[] = [
         content: (
             <Typography.Paragraph>
                 <p>
-                    Welcome to DataHub <strong>Domains</strong>!
+                    欢迎来到AI Data Catalog <strong>Domains</strong>!
                 </p>
                 <p>
-                    <strong>Domains</strong> are collections of related data assets associated with a specific part of
-                    your organization, such as the <strong>Marketing</strong> department.
-                </p>
-                <p>
-                    Learn more about <strong>Domains</strong>{' '}
-                    <a target="_blank" rel="noreferrer noopener" href="https://datahubproject.io/docs/domains">
-                        {' '}
-                        here.
-                    </a>
+                    <strong>Domains</strong> 是与您组织的特定部分相关联的相关数据资产的集合。
+                    比方说 <strong>市场</strong> 部门.
                 </p>
             </Typography.Paragraph>
         ),
@@ -31,11 +24,11 @@ export const DomainsOnboardingConfig: OnboardingStep[] = [
     {
         id: DOMAINS_CREATE_DOMAIN_ID,
         selector: `#${DOMAINS_CREATE_DOMAIN_ID}`,
-        title: 'Create a new Domain',
+        title: '创建新的Domain',
         content: (
             <Typography.Paragraph>
                 <p>
-                    Click here to create a new <strong>Domain</strong>.
+                    点击这里去创建新的 <strong>Domain</strong>.
                 </p>
             </Typography.Paragraph>
         ),

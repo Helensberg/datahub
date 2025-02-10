@@ -77,7 +77,7 @@ export const DefineRecipeStep = ({ state, updateState, goTo, prev, ingestionSour
 
         if (!JSON.parse(recipeJson).source?.type) {
             message.warning({
-                content: `Please add valid ingestion type`,
+                content: `请加上有效地导入类型`,
                 duration: 3,
             });
             return;
@@ -114,7 +114,7 @@ export const DefineRecipeStep = ({ state, updateState, goTo, prev, ingestionSour
     return (
         <>
             <Section>
-                <SelectTemplateHeader level={5}>Configure {sourceDisplayName} Recipe</SelectTemplateHeader>
+                <SelectTemplateHeader level={5}>配置 {sourceDisplayName} 配方</SelectTemplateHeader>
                 {showLookerBanner && (
                     <Alert
                         type="warning"
@@ -123,25 +123,24 @@ export const DefineRecipeStep = ({ state, updateState, goTo, prev, ingestionSour
                             <>
                                 <big>
                                     <i>
-                                        <b>You must acknowledge this message to proceed!</b>
+                                        <b>你必须确认这条消息才能继续进行操作!</b>
                                     </i>
                                 </big>
                                 <br />
                                 <br />
-                                To get complete Looker metadata integration (including Looker views and lineage to the
-                                underlying warehouse tables), you must <b>also</b> use the{' '}
+                                要实现完整的Looker元数据集成 (包括 Looker 视图以及到基础仓库表的谱系),
+                                你必须 <b>另外</b> 使用{' '}
                                 <a href={LOOKML_DOC_LINK} target="_blank" rel="noopener noreferrer">
-                                    DataHub lookml module
+                                    AI Data Catalog lookml模组
                                 </a>
-                                .
+                                。
                                 <br />
                                 <br />
-                                LookML ingestion <b>cannot</b> currently be performed via UI-based ingestion. This is a
-                                known problem the DataHub team is working to solve!
+                                LookML 目前 <b>不能</b> 通过 UI-based 导入. 此问题仍在继续解决！
                                 <br />
                                 <Space direction="horizontal" style={{ width: '100%', justifyContent: 'center' }}>
                                     <Button type="ghost" size="small" onClick={() => setShowLookerBanner(false)}>
-                                        I have set up LookML ingestion!
+                                        我已经设定好 LookML 导入!
                                     </Button>
                                 </Space>
                             </>
@@ -151,9 +150,9 @@ export const DefineRecipeStep = ({ state, updateState, goTo, prev, ingestionSour
                 )}
                 <Typography.Text>
                     {showLookerBanner && <br />}
-                    For more information about how to configure a recipe, see the{' '}
+                    关于更多的配置配方的信息, 请看{' '}
                     <a href={sourceDocumentationUrl} target="_blank" rel="noopener noreferrer">
-                        {sourceDisplayName} source docs.
+                        {sourceDisplayName} 源文件.
                     </a>
                 </Typography.Text>
             </Section>

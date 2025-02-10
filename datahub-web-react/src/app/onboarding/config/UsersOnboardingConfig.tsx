@@ -10,37 +10,26 @@ export const USERS_ASSIGN_ROLE_ID = 'users-assign-role';
 export const UsersOnboardingConfig: OnboardingStep[] = [
     {
         id: USERS_INTRO_ID,
-        title: 'Users',
+        title: '用户',
         content: (
             <Typography.Paragraph>
                 <p>
-                    Welcome to DataHub <strong>Users</strong>!
+                    欢迎来到AI Data Catalog <strong>用户</strong>!
                 </p>
                 <p>
-                    There are a few different ways to onboard new <strong>Users</strong> onto DataHub.
+                    T有几种不同的方式可以把新的<strong>用户</strong> 引入AI Data Catalog.
                 </p>
             </Typography.Paragraph>
         ),
     },
     {
         id: USERS_SSO_ID,
-        title: 'Configuring Single Sign-On (SSO)',
+        title: '配置单点登录 (SSO)',
         content: (
             <Typography.Paragraph>
                 <p>
-                    The preferred way to onboard new <strong>Users</strong> is to use <strong>Single Sign-On</strong>.
-                    Currently, DataHub supports OIDC SSO.
-                </p>
-                <p>
-                    Learn more about how to configure <strong>Single Sign-On</strong>{' '}
-                    <a
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        href="https://datahubproject.io/docs/authentication/guides/sso/configure-oidc-react/#configuring-oidc-in-react"
-                    >
-                        {' '}
-                        here.
-                    </a>
+                    引入新 <strong>用户</strong> 的首选方式是使用 <strong>单点登录</strong>。
+                    目前，AI Data Catalog支持开放身份认证OIDC SSO.
                 </p>
             </Typography.Paragraph>
         ),
@@ -48,23 +37,11 @@ export const UsersOnboardingConfig: OnboardingStep[] = [
     {
         id: USERS_INVITE_LINK_ID,
         selector: `#${USERS_INVITE_LINK_ID}`,
-        title: 'Invite New Users',
+        title: '邀请新用户',
         content: (
             <Typography.Paragraph>
                 <p>
-                    Easily share an invite link with your colleagues to onboard them onto DataHub. Optionally assign a{' '}
-                    <strong>Role</strong> to anyone who joins using the link.
-                </p>
-                <p>
-                    Learn more about configuring invite links{' '}
-                    <a
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        href="https://datahubproject.io/docs/authentication/guides/add-users/#send-prospective-users-an-invite-link"
-                    >
-                        {' '}
-                        here.
-                    </a>
+                    与同事共享邀请链接以便让他们进入AI Data Catalog. 还可以通过为此链接为新进来的用户分配<strong>角色</strong> 。
                 </p>
             </Typography.Paragraph>
         ),
@@ -72,22 +49,11 @@ export const UsersOnboardingConfig: OnboardingStep[] = [
     {
         id: USERS_ASSIGN_ROLE_ID,
         selector: `#${USERS_ASSIGN_ROLE_ID}`,
-        title: 'Assigning Roles',
+        title: '分配角色',
         content: (
             <Typography.Paragraph>
                 <p>
-                    You can assign <strong>Roles</strong> to existing <strong>Users</strong> here.
-                </p>
-                <p>
-                    Learn more about <strong>Roles</strong>{' '}
-                    <a
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        href="https://datahubproject.io/docs/authorization/roles"
-                    >
-                        {' '}
-                        here.
-                    </a>
+                    你可以分配<strong>角色</strong> 给现有的 <strong>用户</strong> 。
                 </p>
             </Typography.Paragraph>
         ),

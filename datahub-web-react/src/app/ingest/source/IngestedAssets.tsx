@@ -101,22 +101,22 @@ export default function IngestedAssets({ id }: Props) {
             {error && <Message type="error" content="" />}
             <HeaderContainer>
                 <TitleContainer>
-                    <Typography.Title level={5}>Ingested Assets</Typography.Title>
+                    <Typography.Title level={5}>导入资产</Typography.Title>
                     {(loading && <Typography.Text type="secondary">Loading...</Typography.Text>) || (
                         <>
                             {(total > 0 && (
                                 <Typography.Paragraph type="secondary">
-                                    The following asset types were ingested during this run.
+                                    在此次运行期间摄取了以下资产类型。
                                 </Typography.Paragraph>
-                            )) || <Typography.Text>No assets were ingested.</Typography.Text>}
+                            )) || <Typography.Text>没有资产被摄取。</Typography.Text>}
                         </>
                     )}
                 </TitleContainer>
                 {!loading && (
                     <TotalContainer>
-                        <Typography.Text type="secondary">Total</Typography.Text>
+                        <Typography.Text type="secondary">全部</Typography.Text>
                         <TotalText style={{ fontSize: 16, color: ANTD_GRAY[8] }}>
-                            <b>{formatNumber(total)}</b> assets
+                            <b>{formatNumber(total)}</b> 资产
                         </TotalText>
                     </TotalContainer>
                 )}
@@ -132,11 +132,11 @@ export default function IngestedAssets({ id }: Props) {
                 ))}
             </EntityCountsContainer>
             <ViewAllButton type="link" onClick={() => setShowAssetSearch(true)}>
-                View All
+                查看全部
             </ViewAllButton>
             {showAssetSearch && (
                 <EmbeddedListSearchModal
-                    title="View Ingested Assets"
+                    title="查看导入的资产"
                     searchBarStyle={{ width: 600, marginRight: 40 }}
                     fixedFilters={{
                         unionType: UnionType.AND,

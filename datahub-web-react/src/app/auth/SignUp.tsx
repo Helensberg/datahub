@@ -86,7 +86,7 @@ export const SignUp: React.VFC<SignUpProps> = () => {
             .then(({ errors }) => {
                 if (!errors) {
                     message.success({
-                        content: `Accepted invite!`,
+                        content: `接受邀请!`,
                         duration: 2,
                     });
                 }
@@ -94,7 +94,7 @@ export const SignUp: React.VFC<SignUpProps> = () => {
             .catch((e) => {
                 message.destroy();
                 message.error({
-                    content: `Failed to accept invite: \n ${e.message || ''}`,
+                    content: `未能接受邀请: \n ${e.message || ''}`,
                     duration: 3,
                 });
             });
@@ -127,7 +127,7 @@ export const SignUp: React.VFC<SignUpProps> = () => {
                     return Promise.resolve();
                 })
                 .catch((_) => {
-                    message.error(`Failed to log in! An unexpected error occurred.`);
+                    message.error(`登录失败，出现未知错误！`);
                 })
                 .finally(() => setLoading(false));
         },
@@ -151,7 +151,7 @@ export const SignUp: React.VFC<SignUpProps> = () => {
                     {loading && <Message type="loading" content="Signing up..." />}
                     <Form onFinish={handleSignUp} layout="vertical">
                         <StyledFormItem
-                            rules={[{ required: true, message: 'Please fill in your email' }]}
+                            rules={[{ required: true, message: '请填写你的email' }]}
                             name="email"
                             // eslint-disable-next-line jsx-a11y/label-has-associated-control
                             label={<label style={{ color: 'white' }}>Email</label>}
@@ -159,7 +159,7 @@ export const SignUp: React.VFC<SignUpProps> = () => {
                             <FormInput prefix={<UserOutlined />} data-testid="email" />
                         </StyledFormItem>
                         <StyledFormItem
-                            rules={[{ required: true, message: 'Please fill in your name' }]}
+                            rules={[{ required: true, message: '请填写你的名字' }]}
                             name="fullName"
                             // eslint-disable-next-line jsx-a11y/label-has-associated-control
                             label={<label style={{ color: 'white' }}>Full Name</label>}
@@ -168,12 +168,12 @@ export const SignUp: React.VFC<SignUpProps> = () => {
                         </StyledFormItem>
                         <StyledFormItem
                             rules={[
-                                { required: true, message: 'Please fill in your password' },
+                                { required: true, message: '请填写你的密码' },
                                 ({ getFieldValue }) => ({
                                     validator() {
                                         if (getFieldValue('password').length < 8) {
                                             return Promise.reject(
-                                                new Error('Your password is fewer than 8 characters'),
+                                                new Error('你的密码少于8个字符'),
                                             );
                                         }
                                         return Promise.resolve();
@@ -188,11 +188,11 @@ export const SignUp: React.VFC<SignUpProps> = () => {
                         </StyledFormItem>
                         <StyledFormItem
                             rules={[
-                                { required: true, message: 'Please confirm your password' },
+                                { required: true, message: '请确认密码' },
                                 ({ getFieldValue }) => ({
                                     validator() {
                                         if (getFieldValue('confirmPassword') !== getFieldValue('password')) {
-                                            return Promise.reject(new Error('Your passwords do not match'));
+                                            return Promise.reject(new Error('密码不匹配'));
                                         }
                                         return Promise.resolve();
                                     },
@@ -205,7 +205,7 @@ export const SignUp: React.VFC<SignUpProps> = () => {
                             <FormInput prefix={<LockOutlined />} type="password" data-testid="confirmPassword" />
                         </StyledFormItem>
                         <StyledFormItem
-                            rules={[{ required: true, message: 'Please fill in your title!' }]}
+                            rules={[{ required: true, message: '请填写你的名称!' }]}
                             name="title"
                             // eslint-disable-next-line jsx-a11y/label-has-associated-control
                             label={<label style={{ color: 'white' }}>Title</label>}

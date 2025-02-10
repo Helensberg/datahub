@@ -205,8 +205,8 @@ export const AccessTokens = () => {
     // Revoke token Handler
     const onRemoveToken = (token: any) => {
         Modal.confirm({
-            title: 'Are you sure you want to revoke this token?',
-            content: `Anyone using this token will no longer be able to access the DataHub API. You cannot undo this action.`,
+            title: '你确定要撤销此令牌吗？',
+            content: `任何使用此令牌的人都将无法再访问 AI Data Catalog API。你无法撤销这一操作`,
             onOk() {
                 // Hack to deal with eventual consistency.
                 const newTokenIds = [...removedTokens, token.id];
@@ -220,7 +220,7 @@ export const AccessTokens = () => {
                     })
                     .catch((e) => {
                         message.destroy();
-                        message.error({ content: `Failed to revoke Token!: \n ${e.message || ''}`, duration: 3 });
+                        message.error({ content: `撤销令牌失败!: \n ${e.message || ''}`, duration: 3 });
                     })
                     .finally(() => {
                         setTimeout(() => {
@@ -314,15 +314,15 @@ export const AccessTokens = () => {
     return (
         <SourceContainer>
             {tokensLoading && !tokensData && (
-                <Message type="loading" content="Loading tokens..." style={{ marginTop: '10%' }} />
+                <Message type="loading" content="加载令牌..." style={{ marginTop: '10%' }} />
             )}
-            {tokensError && message.error('Failed to load tokens :(')}
-            {revokeTokenError && message.error('Failed to update the Token :(')}
+            {tokensError && message.error('未能加载令牌 :(')}
+            {revokeTokenError && message.error('未能更新令牌 :(')}
             <TokensContainer>
                 <TokensHeaderContainer>
-                    <TokensTitle level={2}>Manage Access Tokens</TokensTitle>
+                    <TokensTitle level={2}>管理访问令牌</TokensTitle>
                     <Typography.Paragraph type="secondary">
-                        Manage Access Tokens for use with DataHub APIs.
+                        .
                     </Typography.Paragraph>
                 </TokensHeaderContainer>
             </TokensContainer>
@@ -333,16 +333,14 @@ export const AccessTokens = () => {
                     message={
                         <span>
                             <StyledInfoCircleOutlined />
-                            Token based authentication is currently disabled. Contact your DataHub administrator to
-                            enable this feature.
+                            基于令牌的身份验证目前已被禁用。请联系你的 AI Data Catalog 管理员以启用此功能。
                         </span>
                     }
                 />
             )}
-            <Typography.Title level={5}>Personal Access Tokens</Typography.Title>
+            <Typography.Title level={5}>个人访问令牌</Typography.Title>
             <PersonTokenDescriptionText type="secondary">
-                Personal Access Tokens allow you to make programmatic requests to DataHub&apos;s APIs. They inherit your
-                privileges and have a finite lifespan. Do not share Personal Access Tokens.
+                个人访问令牌允许你以编程方式向 AI Data Catalog 的应用程序编程接口（APIs）发出请求。它们会继承你的权限，并且有一定的有效期。请勿共享个人访问令牌。
             </PersonTokenDescriptionText>
             <TabToolbar>
                 <div>
@@ -352,7 +350,7 @@ export const AccessTokens = () => {
                         data-testid="add-token-button"
                         disabled={!canGeneratePersonalAccessTokens}
                     >
-                        <PlusOutlined /> Generate new token
+                        <PlusOutlined /> 生成新令牌
                     </Button>
                 </div>
                 <SelectContainer>
@@ -402,7 +400,7 @@ export const AccessTokens = () => {
                 dataSource={tableData}
                 rowKey="urn"
                 locale={{
-                    emptyText: <Empty description="No Access Tokens!" image={Empty.PRESENTED_IMAGE_SIMPLE} />,
+                    emptyText: <Empty description="没有访问令牌!" image={Empty.PRESENTED_IMAGE_SIMPLE} />,
                 }}
                 pagination={false}
             />

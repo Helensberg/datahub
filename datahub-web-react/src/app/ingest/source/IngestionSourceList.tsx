@@ -344,8 +344,8 @@ export const IngestionSourceList = () => {
 
     const onExecute = (urn: string) => {
         Modal.confirm({
-            title: `Confirm Source Execution`,
-            content: "Click 'Execute' to run this ingestion source.",
+            title: `确认数据源导入`,
+            content: "点击执行进行导入操作.",
             onOk() {
                 executeIngestionSource(urn);
             },
@@ -358,8 +358,8 @@ export const IngestionSourceList = () => {
 
     const onDelete = (urn: string) => {
         Modal.confirm({
-            title: `Confirm Ingestion Source Removal`,
-            content: `Are you sure you want to remove this ingestion source? Removing will terminate any scheduled ingestion runs.`,
+            title: `确认数据源移除`,
+            content: `你确定要移除这个数据摄取源吗？移除操作将会终止任何已安排好的数据摄取任务运行`,
             onOk() {
                 deleteIngestionSource(urn);
             },
@@ -391,10 +391,10 @@ export const IngestionSourceList = () => {
                             onClick={() => setIsBuildingSource(true)}
                             data-testid="create-ingestion-source-button"
                         >
-                            <PlusOutlined /> Create new source
+                            <PlusOutlined /> 创建新数据源
                         </Button>
                         <Button id={INGESTION_REFRESH_SOURCES_ID} type="text" onClick={onRefresh}>
-                            <RedoOutlined /> Refresh
+                            <RedoOutlined /> 刷新
                         </Button>
                     </div>
                     <FilterWrapper>
@@ -409,7 +409,7 @@ export const IngestionSourceList = () => {
 
                         <SearchBar
                             initialQuery={query || ''}
-                            placeholderText="Search sources..."
+                            placeholderText="搜寻数据源..."
                             suggestions={[]}
                             style={{
                                 maxWidth: 220,
