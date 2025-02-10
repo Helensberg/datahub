@@ -4,7 +4,7 @@ ARG APP_ENV=prod
 # Defining custom repo urls for use in enterprise environments. Re-used between stages below.
 #ARG ALPINE_REPO_URL=http://dl-cdn.alpinelinux.org/alpine
 ARG ALPINE_REPO_URL=https://mirrors.tencent.com/alpine
-ARG GITHUB_REPO_URL=https://github.com
+ARG GITHUB_REPO_URL=https://ghproxy.net/https://github.com
 ARG MAVEN_CENTRAL_REPO_URL=https://repo1.maven.org/maven2
 
 FROM golang:1-alpine3.20 AS binary
@@ -47,8 +47,8 @@ RUN apk --no-cache --update-cache --available upgrade \
     && curl -sS ${MAVEN_CENTRAL_REPO_URL}/org/eclipse/jetty/jetty-runner/${JETTY_VERSION}/jetty-runner-${JETTY_VERSION}.jar --output jetty-runner.jar \
     && curl -sS ${MAVEN_CENTRAL_REPO_URL}/org/eclipse/jetty/jetty-jmx/${JETTY_VERSION}/jetty-jmx-${JETTY_VERSION}.jar --output jetty-jmx.jar \
     && curl -sS ${MAVEN_CENTRAL_REPO_URL}/org/eclipse/jetty/jetty-util/${JETTY_VERSION}/jetty-util-${JETTY_VERSION}.jar --output jetty-util.jar \
-    && wget --no-verbose ${GITHUB_REPO_URL}/open-telemetry/opentelemetry-java-instrumentation/releases/download/v1.24.0/opentelemetry-javaagent.jar \
-    && wget --no-verbose ${MAVEN_CENTRAL_REPO_URL}/io/prometheus/jmx/jmx_prometheus_javaagent/${JMX_VERSION}/jmx_prometheus_javaagent-${JMX_VERSION}.jar -O jmx_prometheus_javaagent.jar \
+    && wget ${GITHUB_REPO_URL}/open-telemetry/opentelemetry-java-instrumentation/releases/download/v1.24.0/opentelemetry-javaagent.jar \
+    && wget ${MAVEN_CENTRAL_REPO_URL}/io/prometheus/jmx/jmx_prometheus_javaagent/${JMX_VERSION}/jmx_prometheus_javaagent-${JMX_VERSION}.jar -O jmx_prometheus_javaagent.jar \
     && cp /usr/lib/jvm/java-17-openjdk/jre/lib/security/cacerts /tmp/kafka.client.truststore.jks
 COPY --from=binary /go/bin/dockerize /usr/local/bin
 

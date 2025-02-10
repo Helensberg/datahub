@@ -3,7 +3,7 @@ ARG KAFKA_DOCKER_VERSION=7.4.6
 # Defining custom repo urls for use in enterprise environments. Re-used between stages below.
 #ARG ALPINE_REPO_URL=http://dl-cdn.alpinelinux.org/alpine
 ARG ALPINE_REPO_URL=https://mirrors.tencent.com/alpine
-ARG GITHUB_REPO_URL=https://github.com
+ARG GITHUB_REPO_URL=https://ghproxy.net/https://github.com
 ARG MAVEN_CENTRAL_REPO_URL=https://repo1.maven.org/maven2
 ARG APACHE_DOWNLOAD_URL=https://mirrors.cloud.tencent.com/apache/
 
@@ -23,7 +23,7 @@ ARG ALPINE_REPO_URL
 ARG APACHE_DOWNLOAD_URL
 ARG GITHUB_REPO_URL
 
-ENV KAFKA_VERSION=3.7.1
+ENV KAFKA_VERSION=3.7.2
 ENV SCALA_VERSION=2.13
 
 LABEL name="kafka" version=${KAFKA_VERSION}
